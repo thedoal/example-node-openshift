@@ -10,7 +10,7 @@ app.use(async (ctx) => {
   };
 });
 
-const server = app.listen(PORT, () => {
+const server = app.listen(() => {
   console.log(`Server listening on port: ${PORT}`);
 });
 
