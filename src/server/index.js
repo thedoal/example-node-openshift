@@ -1,7 +1,7 @@
 const Koa = require('koa');
 
 const app = new Koa();
-//const PORT = 1337;
+const PORT = 80;
 
 app.use(async (ctx) => {
   ctx.body = {
@@ -10,7 +10,7 @@ app.use(async (ctx) => {
   };
 });
 
-const server = app.listen(() => {
+const server = app.listen(PORT, () => {
   console.log(`Server listening on port: ${PORT}`);
 });
 
