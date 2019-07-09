@@ -14,7 +14,7 @@
     "body-parser": "^1.19.0",
     "chai": "4.1.1",
     "chai-http": "^3.0.0",
-    "express": "^4.17.1",
+    
     "koa-router": "^7.4.0",
     "mocha": "3.5.0",
     "mongodb": "^3.2.7",
@@ -22,7 +22,8 @@
     "nodemon": "^1.19.1"
   },
   "dependencies": {
-    "koa": "^2.3.0"
+    "koa": "^2.3.0",
+    "express": "^4.17.1"
   },
   "description": "[![Build Status](https://travis-ci.org/mjhea0/node-koa-api.svg?branch=master)](https://travis-ci.org/mjhea0/node-koa-api)",
   "main": "knexfile.js",
