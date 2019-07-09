@@ -7,7 +7,7 @@ var app = Express();
 app.use(BodyParser.json());
 app.use(BodyParser.urlencoded({ extended: true }));
 
-Mongoose.connect("mongodb://172.30.136.250:27017/local");
+Mongoose.connect("mongodb://172.30.136.250:27017/dbexample");
 
 const PersonModel = Mongoose.model("personas", {
   firstname: String,
