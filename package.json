@@ -11,18 +11,19 @@
   "license": "ISC",
   "devDependencies": {
     "body-parse": "^0.1.0",
-    "body-parser": "^1.19.0",
     "chai": "4.1.1",
     "chai-http": "^3.0.0",
     "koa-router": "^7.4.0",
     "mocha": "3.5.0",
     "mongodb": "^3.2.7",
-    "mongoose": "^5.6.4",
+    
     "nodemon": "^1.19.1"
   },
   "dependencies": {
     "koa": "^2.3.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.6.4",
+    "body-parser": "^1.19.0"
   },
   "description": "[![Build Status](https://travis-ci.org/mjhea0/node-koa-api.svg?branch=master)](https://travis-ci.org/mjhea0/node-koa-api)",
   "main": "knexfile.js",
