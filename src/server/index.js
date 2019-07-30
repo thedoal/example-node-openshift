@@ -7,7 +7,7 @@ var app = Express();
 app.use(BodyParser.json());
 app.use(BodyParser.urlencoded({ extended: true }));
 
-Mongoose.connect("mongodb://172.30.78.216:27017/dbexample");
+//Mongoose.connect("mongodb://172.30.78.216:27017/dbexample");
 
 const PersonModel = Mongoose.model("personas", {
   firstname: String,
@@ -16,8 +16,8 @@ const PersonModel = Mongoose.model("personas", {
 
 app.post("/person", async (request, response) => {
   try {
-    var person = new PersonModel(request.body);
-    var result = await person.save();
+    var person = new PersonModel({firstname:"Aldo",lastname:"pizarro"});
+    var result = person;
     response.send(result);
   } catch (error) {
     response.status(500).send(error);
@@ -25,7 +25,7 @@ app.post("/person", async (request, response) => {
 });
 app.get("/people", async (request, response) => {
   try {
-      var result = await PersonModel.find().exec();
+      var result = new PersonModel({firstname:"aldo",lastname:"pizarro"});
       response.send(result);
   } catch (error) {
       response.status(500).send(error);
@@ -33,7 +33,7 @@ app.get("/people", async (request, response) => {
 });
 app.get("/person/:id", async (request, response) => {
   try {
-      var person = await PersonModel.findById(request.params.id).exec();
+      var person = new PersonModel({firstname:"aldo",lastname:"pizarro"});
       response.send(person);
   } catch (error) {
       response.status(500).send(error);
@@ -41,18 +41,18 @@ app.get("/person/:id", async (request, response) => {
 });
 app.put("/person/:id", async (request, response) => {
   try {
-      var person = await PersonModel.findById(request.params.id).exec();
+      /*var person = await PersonModel.findById(request.params.id).exec();
       person.set(request.body);
       var result = await person.save();
-      response.send(result);
+      response.send(result);*/
   } catch (error) {
       response.status(500).send(error);
   }
 });
 app.delete("/person/:id", async (request, response) => {
   try {
-      var result = await PersonModel.deleteOne({ _id: request.params.id }).exec();
-      response.send(result);
+      /*var result = await PersonModel.deleteOne({ _id: request.params.id }).exec();
+      response.send(result);*/
   } catch (error) {
       response.status(500).send(error);
   }

@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  labels:
+    component: '#(deploy-name)#'
+    group: nodejs-openshift
+    version: '#(version.service)#'
+  name: #(deploy-name)#-properties
+data:
+  default.json: |-
+    {
+      "datos" :{
+              "mongodb_url": "#(mongodb.url)#",
+              "mongodb_db" : "#(mongodb.db)#"
+              }
+    }
