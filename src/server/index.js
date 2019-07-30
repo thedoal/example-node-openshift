@@ -25,7 +25,7 @@ app.post("/person", async (request, response) => {
 });
 app.get("/people", async (request, response) => {
   try {
-      var result = new PersonModel({firstname:"aldo",lastname:"pizarro"});
+      var result = new PersonModel({firstname:"Aldo",lastname:"pizarro"});
       response.send(result);
   } catch (error) {
       response.status(500).send(error);
